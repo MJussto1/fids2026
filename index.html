@@ -26,7 +26,6 @@
             box-sizing: border-box;
         }
         
-        /* ENCABEZADO FIJO */
         .header { 
             border-bottom: 0.5vh solid #FFB300; 
             padding-bottom: 1vh; 
@@ -53,12 +52,11 @@
         
         .logos-izquierda { display: flex; align-items: center; gap: 1.5vw; }
         .bloque-derecho { display: flex; align-items: center; gap: 1.5vw; }
-        .logo-top-aip { height: 14vh; width: auto; display: block; } 
-        .logo-top-gmm { height: 14vh; max-height: 190px; width: auto; display: block; border-radius: 8px; } 
+        .logo-top-aip { height: 14vh !important; width: auto; display: block; } 
+        .logo-top-gmm { height: 14vh !important; width: auto; display: block; border-radius: 6px; } 
         .header h1 { margin: 0; color: #FFB300; font-size: 3.5vh; text-transform: uppercase; font-weight: 800; }
         .clock { color: #FFFFFF; font-size: 3.8vh; font-weight: bold; font-variant-numeric: tabular-nums; }
         
-        /* ÁREA DE CONTENIDO DE TABLA CON ALTO FIJO */
         .fids-section { 
             width: 100%; 
             flex-grow: 1;
@@ -67,17 +65,15 @@
             overflow: hidden;
         }
         
-        /* CABEZAL INDEPENDIENTE Y FIJO */
         .table-header-wrapper {
             width: 100%;
             flex-shrink: 0;
         }
         
-        /* CONTENEDOR MÓVIL (VENTANA DE SCROLL) */
         .table-body-scroll {
             width: 100%;
             flex-grow: 1;
-            overflow: hidden; /* Oculta barras de scroll físico */
+            overflow: hidden; 
             position: relative;
         }
         
@@ -87,12 +83,11 @@
             table-layout: fixed;
         }
         
-        /* Ajuste estructural para sincronizar cabezal y cuerpo */
         table.body-table {
             position: absolute;
             top: 0;
             left: 0;
-            transition: top 0.8s cubic-bezier(0.25, 1, 0.5, 1); /* Desplazamiento fluido */
+            transition: top 0.8s cubic-bezier(0.25, 1, 0.5, 1); 
         }
         
         th { 
@@ -104,13 +99,12 @@
             text-transform: uppercase; 
         }
         
-        /* FILAS GIGANTES DEBIDO A RESTRICCIÓN DE 5 EN PANTALLA */
         td { 
-            height: 13.5vh; /* Forzamos que cada fila ocupe el espacio perfecto para albergar un logo gigante */
+            height: 13.5vh; 
             padding: 0.5vh 1vw; 
             border-bottom: 1px solid #1C1C1E; 
             vertical-align: middle; 
-            font-size: 3.8vh; /* Tipografía más imponente */
+            font-size: 3.8vh; 
             font-weight: bold;
             white-space: nowrap;
             overflow: hidden;
@@ -126,12 +120,12 @@
         .estatus { text-transform: uppercase; }
         .estatus-a-tiempo { color: #00FF00; }
         .estatus-demorado { color: #FF3B30; }
+        .estatus-arrivado { color: #34C759; } /* Estilo de color verde para ARRIVADO */
         
-        /* LOGOS ENORMES OPTIMIZADOS */
         .logo-aerolinea { 
-            height: 12vh !important;       /* Multiplicado radicalmente para un tamaño masivo */
+            height: 12.5vh !important;       
             max-height: none !important; 
-            max-width: 95%;
+            max-width: 98%;
             object-fit: contain;
             display: inline-block; 
             vertical-align: middle;
@@ -188,7 +182,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">IAH</td>
-                    <td style="width: 20%;"><img src="recursos/HOU.png" alt="United" class="logo-aerolinea" style="height: 10vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/HOU.png" alt="United" class="logo-aerolinea" style="height: 12.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">4277</td>
                     <td class="hora" style="width: 15%;">12:25:00</td>
                     <td class="sala" style="width: 10%;">1</td>
@@ -220,7 +214,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">MID</td>
-                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 5vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 7.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">9255</td>
                     <td class="hora" style="width: 15%;">14:05:00</td>
                     <td class="sala" style="width: 10%;">2</td>
@@ -228,7 +222,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">CUN</td>
-                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 5vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 7.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">2027</td>
                     <td class="hora" style="width: 15%;">14:35:00</td>
                     <td class="sala" style="width: 10%;">3</td>
@@ -260,7 +254,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">TIJ</td>
-                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 5vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 7.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">5117</td>
                     <td class="hora" style="width: 15%;">21:25:00</td>
                     <td class="sala" style="width: 10%;">2</td>
@@ -268,7 +262,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">GDL</td>
-                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 5vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 7.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">3245</td>
                     <td class="hora" style="width: 15%;">21:50:00</td>
                     <td class="sala" style="width: 10%;">3</td>
@@ -284,7 +278,7 @@
                 </tr>
                 <tr class="">
                     <td class="vuelo" style="width: 25%;">MTY</td>
-                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 5vh !important;"></td>
+                    <td style="width: 20%;"><img src="recursos/VI.png" alt="Viva" class="logo-aerolinea" style="height: 7.5vh !important;"></td>
                     <td class="destino" style="width: 15%;">4009</td>
                     <td class="hora" style="width: 15%;">23:00:00</td>
                     <td class="sala" style="width: 10%;">2</td>
@@ -296,14 +290,12 @@
 </div>
 </div>
     <script>
-        // Reloj en tiempo real
         function updateClock() {
             const now = new Date();
             document.getElementById('liveClock').textContent = String(now.getHours()).padStart(2, '0') + ':' + String(now.getMinutes()).padStart(2, '0');
         }
         setInterval(updateClock, 1000); updateClock();
         
-        // SCROLL AUTOMÁTICO INTELIGENTE EN BLOQUES DE 5 REGISTROS
         const table = document.getElementById('fidsTable');
         const rows = table.getElementsByTagName('tr');
         const totalRows = rows.length;
@@ -312,31 +304,24 @@
         const visibleRowsCount = 5; 
         
         function autoScroll() {
-            if (totalRows <= visibleRowsCount) return; // Si hay 5 o menos registros, se queda estático fijamente.
-            
-            // Calculamos la altura exacta de una fila en píxeles dinámicos
+            if (totalRows <= visibleRowsCount) return; 
             const rowHeight = rows[0].offsetHeight;
-            
             currentIndex += visibleRowsCount;
             
             if (currentIndex >= totalRows) {
-                // Si llegamos al final, regresa suavemente al inicio tras una pausa corta
                 setTimeout(() => {
                     currentIndex = 0;
                     table.style.top = '0px';
                 }, 4000);
             } else {
-                // Desplaza la tabla hacia arriba el equivalente a 5 filas
                 table.style.top = '-' + (currentIndex * rowHeight) + 'px';
             }
         }
         
-        // Ejecuta el movimiento de pantalla cada 7 segundos para dar tiempo de lectura cómodo
         if (totalRows > visibleRowsCount) {
             setInterval(autoScroll, 7000);
         }
         
-        // Recarga dura de la página cada 45 segundos para refrescar la inyección de datos de GitHub
         setTimeout(function() {
             const url = new URL(window.location.href);
             url.searchParams.set('t', new Date().getTime());
